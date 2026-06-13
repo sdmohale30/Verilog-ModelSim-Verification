@@ -1,0 +1,28 @@
+# Compile of mux21.v was successful.
+# Compile of tb_mux21.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.tb_mux21
+# vsim -voptargs="+acc" work.tb_mux21 
+# Start time: 01:48:24 on Jun 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_mux21(fast)
+# Loading work.mux21(fast)
+add wave -position insertpoint sim:/tb_mux21/*
+add wave -position insertpoint  \
+sim:/tb_mux21/b
+add wave -position insertpoint  \
+sim:/tb_mux21/sel
+add wave -position insertpoint  \
+sim:/tb_mux21/y
+run 100 ns
+# Time=0 | A=0 B=1 Sel=0 | Y=0
+# Time=10000 | A=1 B=1 Sel=0 | Y=1
+# Time=20000 | A=1 B=0 Sel=1 | Y=0
+# Time=30000 | A=1 B=1 Sel=1 | Y=1
+# ** Note: $finish    : C:/Verilog-ModelSim-Verification/01_Mux21/sim/tb_mux21.v(29)
+#    Time: 40 ns  Iteration: 0  Instance: /tb_mux21
+# 1
+# Break in Module tb_mux21 at C:/Verilog-ModelSim-Verification/01_Mux21/sim/tb_mux21.v line 29
+run -all
+# End time: 02:27:07 on Jun 13,2026, Elapsed time: 0:38:43
+# Errors: 0, Warnings: 6

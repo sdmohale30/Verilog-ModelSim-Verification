@@ -1,0 +1,6 @@
+# Ignore ModelSim library directory and transcripts
+work/
+transcript
+*.wlf
+*.vstf
+*.log
