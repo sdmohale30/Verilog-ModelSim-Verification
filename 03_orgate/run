@@ -1,0 +1,6 @@
+vlib work
+vlog or_gate.v
+vlog or_gate_tb.v
+vsim work.or_gate_tb
+add wave -r *
+run -all
