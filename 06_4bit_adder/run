@@ -1,0 +1,9 @@
+vlib work
+vlog ha.v
+vlog fa.v
+vlog add4.v
+vlog fa_tb.v
+vlog add4_tb.v
+vsim work.add4_tb
+add wave -r *
+run -all
