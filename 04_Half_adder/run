@@ -1,0 +1,6 @@
+vlib work
+vlog ha.v
+vlog ha_tb.v
+vsim work.ha_tb
+add wave -r *
+run -all
