@@ -1,0 +1,12 @@
+module comp_tb;
+reg a,b;
+wire gt,eq,lt;
+comp DUT(gt,eq,lt,a,b);
+initial begin
+$monitor("a=%b b=%b|gt=%b eq=%b lt=%b",a,b,gt,eq,lt);
+a=0;b=0;#10;
+a=0;b=1;#10;
+a=1;b=0;#10;
+a=1;b=1;#10;
+end
+endmodule
