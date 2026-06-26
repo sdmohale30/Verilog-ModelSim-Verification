@@ -1,0 +1,6 @@
+vlib work
+vlog mux21.v
+vlog mux21_tb.v
+vsim work.mux21_tb
+add wave -r *
+run -all
