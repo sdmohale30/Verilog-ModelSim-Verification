@@ -1,0 +1,21 @@
+module mux41_tb;
+reg i1,i2,i3,i4,s1,s2;
+wire y;
+wire w1,w2,w3,w4,w5,w6;
+mux41 sss(y,s1,s2,i1,i2,i3,i4);
+initial begin
+$monitor("i1=%b|i2=%b|i3=%b|i4=%b|s1=%b|s2=%b|y=%b",i1,i2,i3,i4,s1,s2,y);
+s1=0;s2=0;i1=0;#10;
+s1=0;s2=0;i1=1;#10;
+s1=0;s2=1;i2=0;#10;
+s1=0;s2=1;i2=1;#10;
+s1=1;s2=0;i3=0;#10;
+s1=1;s2=0;i3=1;#10;
+s1=1;s2=1;i4=1;#10;
+s1=1;s2=1;i4=1;#10;
+
+end
+endmodule
+
+
+
