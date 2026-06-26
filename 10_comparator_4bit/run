@@ -1,0 +1,6 @@
+vlib work
+vlog comp4b.v
+vlog comp4b_tb.v
+vsim work.comp4b_tb
+add wave -r *
+run -all
