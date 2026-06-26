@@ -1,0 +1,12 @@
+module mux41(y,s1,s2,i1,i2,i3,i4);
+input i1,i2,i3,i4,s1,s2;
+output y;
+wire w1,w2,w3,w4,w5,w6;
+not g1(w1,s1);
+not g2(w2,s2);
+and g3(w3,i1,w1,w2);
+and g4(w4,i2,w1,s2);
+and g5(w5,i3,s1,w2);
+and g6(w6,i4,s1,s2);
+or g7(y,w3,w4,w5,w6);
+endmodule
