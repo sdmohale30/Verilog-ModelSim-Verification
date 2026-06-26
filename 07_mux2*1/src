@@ -1,0 +1,9 @@
+module mux21(y,s,a,b);
+input a,b,s;
+output y;
+wire w1,w2,w3;
+not g4(w3,s);
+and g1(w1,a,w3);
+and g2(w2,b,s);
+or g3(y,w1,w2);
+endmodule
