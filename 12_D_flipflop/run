@@ -1,0 +1,6 @@
+vlib work
+vlog dff.v
+vlog dff_tb.v
+vsim work.dff_tb
+add wave -r *
+run -all
