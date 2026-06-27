@@ -1,0 +1,6 @@
+vlib work
+vlog srff.v
+vlog srff_tb.v
+vsim work.srff_tb
+add wave -r *
+run -all
