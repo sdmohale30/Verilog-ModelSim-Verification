@@ -1,0 +1,23 @@
+module dff_tb;
+reg clk;
+reg s,r;
+wire q;
+srff DUT(clk,s,r,q);
+//for generating clock pulse
+initial begin
+clk=0; 
+forever #5 clk = ~clk;
+end
+
+//testcase
+
+initial begin
+$monitor("Time=%0t  clk=%b  s=%b r=%b q=%b",$time,clk,s,r,q);
+s=0;r=0;
+#10 s=1;r=0;
+#10 s=0;r=0;
+#10 s=0;r=1;
+#10 s=1;r=1;
+$finish;
+end
+endmodule
