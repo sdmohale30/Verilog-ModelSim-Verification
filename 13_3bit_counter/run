@@ -1,0 +1,6 @@
+vlib work
+vlog ctr.v
+vlog ctr_tb.v
+vsim work.ctr_tb
+add wave -r *
+run -all
