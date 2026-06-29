@@ -1,0 +1,22 @@
+module ctr_tb;
+reg clk;
+reg rst;
+wire count;
+ctr DUT(clk,rst,count);
+
+initial begin
+clk=0;
+forever #5 clk=~clk;
+end
+
+initial begin
+$monitor("$Time=%b clk=%b rst=%b",$time,clk,rst);
+rst=0;#10
+rst=1;#10
+rst=0;#10
+rst=0;#10rst=0;#10rst=0;#10rst=0;#10rst=0;#10rst=0;#10rst=0;#10
+rst=1;#10
+rst=1;#10
+$finish;
+end
+endmodule
